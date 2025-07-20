@@ -37,15 +37,14 @@ Read more about parallel and serial version implementation of CRC [here](https:/
 
 ├── README.md: Project documentation
 
+## Test Vector
+To validate the implementation we have used the standard input: "123456789" (ASCII). 
+Expected CRC: 0x29B1
 
 ## Key Features
 - Fast and simple hardware implementation (using shift registers and XOR gates).
 - Detects common transmission errors: single-bit errors, double-bit errors, burst errors.
 - More reliable than checksums or parity bits for data integrity.
-
-## Test Vector
-To validate the implementation we have used the standard input: "123456789" (ASCII). 
-Expected CRC: 0x29B1
 
 ## Contributions 
 Contributions, suggestions, and improvements are always welcome!  
