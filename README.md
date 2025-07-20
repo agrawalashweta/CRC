@@ -28,9 +28,13 @@ Read more about parallel and serial version implementation of CRC [here](https:/
 
 ## Project Structure
 ├── CRC16CCIT.v: Bit-serial CRC-16-CCITT Verilog implementation
+
 ├── crc_parallel.v: Byte-parallel CRC-16-CCITT implementation
+
 ├── CRC16TB.v: Testbench for CRC validation
+
 ├── CRC16.png: Simulation for CRC testbench.
+
 ├── README.md: Project documentation
 
 
