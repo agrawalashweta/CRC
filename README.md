@@ -11,10 +11,10 @@ This project implements a hardware module for computing the **CRC-16-CCITT** che
 - Synthesizable and simulation-ready
 - Verilog 2001 compatible
 
-## 🔧 How CRC Works
+## How CRC Works
 CRC works by treating data as a binary number and dividing it by a fixed generator polynomial using modulo-2 arithmetic. The remainder of this division is the CRC value or checksum, which is appended to the message. At the receiving end, the same division is performed. If the remainder is non-zero, it indicates an error.
 
-## 📐 CRC Components
+## CRC Components
 - Message: The data to transmit.
 - Generator Polynomial (G): A fixed binary number (e.g., 1001 for a simple 4-bit CRC).
 - Divisor: The polynomial used to divide the message.
