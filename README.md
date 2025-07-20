@@ -14,11 +14,25 @@ This project implements a hardware module for computing the **CRC-16-CCITT** che
 ## How CRC Works
 CRC works by treating data as a binary number and dividing it by a fixed generator polynomial using modulo-2 arithmetic. The remainder of this division is the CRC value or checksum, which is appended to the message. At the receiving end, the same division is performed. If the remainder is non-zero, it indicates an error.
 
+### Parallel vs Serial implementation of CRC
+- **Serial Version**: Processes 1 bit per cycle, suitable for slower or simple systems.
+- **Parallel Version**: Processes full bytes (or more) per cycle for higher throughput.
+
+Read more about parallel and serial version implementation of CRC [here](https://ieeexplore.ieee.org/document/6892739/).
+
 ## CRC Components
 - Message: The data to transmit.
 - Generator Polynomial (G): A fixed binary number (e.g., 1001 for a simple 4-bit CRC).
 - Divisor: The polynomial used to divide the message.
 - Remainder (CRC): The bits that are appended to the original message.
+
+## Project Structure
+├── CRC16CCIT.v: Bit-serial CRC-16-CCITT Verilog implementation
+├── crc_parallel.v: Byte-parallel CRC-16-CCITT implementation
+├── CRC16TB.v: Testbench for CRC validation
+├── CRC16.png: Simulation for CRC testbench.
+├── README.md: Project documentation
+
 
 ## Key Features
 - Fast and simple hardware implementation (using shift registers and XOR gates).
@@ -32,7 +46,7 @@ Expected CRC: 0x29B1
 ## Contributions 
 Contributions, suggestions, and improvements are always welcome!  
 
-Feel free to open a pull reuqest or create an issue if you have ideas or find bugs.
+Feel free to open a pull request or create an issue if you have ideas or find bugs.
 
 
 
